@@ -13,7 +13,10 @@ export default function Home() {
         <p className="font-mono font-semibold text-md ml-2">ASCII art</p>
       </div>
 
-      <MainPage />
+      <div className="flex ml-10">
+        <MainPage />
+      </div>
+
     </main>
   )
 }

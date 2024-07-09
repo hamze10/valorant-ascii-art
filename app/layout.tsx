@@ -1,3 +1,4 @@
+import Script from "next/script"
 import './globals.css'
 
 export const metadata = {
@@ -14,7 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1459940579664307" crossOrigin="anonymous"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHV3H46K80"></script>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-DHV3H46K80"></Script>
         <script
           id="google-analytics"
           dangerouslySetInnerHTML={

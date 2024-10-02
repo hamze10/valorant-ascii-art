@@ -6,6 +6,8 @@ import Button from "@/components/Button";
 import Loading from "./loading";
 import { AsciiConfig, initData } from "@/data/data";
 import { EyeSlashIcon, EyeIcon, PlusCircleIcon, PlusIcon } from '@heroicons/react/24/solid'
+import CookieConsent from "react-cookie-consent";
+import { useRouter } from "next/navigation";
 
 const WIDTH: number = 26;
 const LOCAL_STORAGE: string = "ascii";
@@ -44,7 +46,7 @@ const MainPage = () => {
     const [showSideBar, setShowSideBar] = useState(true);
     const [active, setActive] = useState(initData[0]);
     const [ascii, dispatch] = useReducer(asciiReducer, initData);
-    const [showModal, setShowModal] = useState(false);
+    const router = useRouter();
 
     const handleAddAscii = () => {
         let newId = ascii.length > 0 ? ascii.slice(-1)[0].id + 1 : 1
@@ -203,34 +205,21 @@ const MainPage = () => {
 
                 <Canvas width={WIDTH} onClick={checkColor} onMouseOver={checkHoverAndCtrl} active={active} />
 
-                <div className="flex flew-row md:justify-between mb-48">
+                <div className="flex flew-row md:justify-between mb-10">
                     <div className="flex flex-row gap-2">
                         <Button style="bg-green-500 hover:bg-green-600" onClick={handleSaveAscii} text="Save changes" />
                         <Button style="bg-gray-400 hover:bg-gray-500" onClick={copyActive} text="Copy" />
                     </div>
                     <div>
-                        <Button style="ml-2 bg-orange-400 hover:bg-orange-500" onClick={() => setShowModal(true)} text="How to use it" />
                         <Button style="ml-2 bg-red-400 hover:bg-red-500" onClick={reset} text="Reset" />
                     </div>
                 </div>
 
-                {showModal && (
-                    <div className="fixed inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center z-50">
-                        <div className="relative pb-9/16 sm:pb-16/9">
-                            <iframe
-                                width="800"
-                                height="600"
-                                src="https://www.youtube.com/embed/ByfYMlrubaA?si=s8mpcntdkjv6Ngky"
-                                title="YouTube video player"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen
-                            />
-                        </div>
-                        <Button style="mt-2 bg-red-400 hover:bg-red-500" onClick={() => setShowModal(false)} text="Close" />
-                    </div>
-                )}
+                <div>
+                    <p className="font-bold"> Our site is not affiliated with Valorant or Riot Games. - <button className="font-light underline italic" type="button" onClick={() => router.push("/mentions-legales")}> Mentions Légales </button> </p>
+                </div>
             </div>
+            <CookieConsent> This website use cookies to improve user experience.</CookieConsent>
         </div>
     );
 }

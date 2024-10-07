@@ -20,6 +20,9 @@ const Header = () => {
                 <button className={buttonStyle} type="button" onClick={() => router.push("/")}>
                     Home
                 </button>
+                <button className={buttonStyle} type="button" onClick={() => router.push("/twitch")}>
+                    Twitch
+                </button>
                 <button className={buttonStyle} type="button" onClick={() => router.push("/about")}>
                     About
                 </button>

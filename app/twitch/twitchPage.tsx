@@ -3,17 +3,16 @@
 import { useEffect, useReducer, useState } from "react";
 import Canvas from "@/components/Canvas";
 import Button from "@/components/Button";
-import Loading from "./loading";
-import { AsciiConfig, initData } from "@/data/data";
+import Loading from "../loading";
+import { AsciiConfig, initDataTwitch } from "@/data/data";
 import { EyeSlashIcon, EyeIcon, PlusCircleIcon, PlusIcon } from '@heroicons/react/24/solid'
 import CookieConsent from "react-cookie-consent";
 import { useRouter } from "next/navigation";
 
-const WIDTH: number = 26;
-const LOCAL_STORAGE: string = "ascii";
+const WIDTH: number = 32;
+const LOCAL_STORAGE: string = "ascii-twitch";
 const GRAY_CHAR: string = "░";
 const WHITE_CHAR: string = "█";
-const buttonStyle = "font-bold rounded-lg p-1 bg-white";
 
 const asciiReducer = (ascii: Array<AsciiConfig>, action: any) => {
     switch (action.type) {
@@ -42,11 +41,11 @@ const asciiReducer = (ascii: Array<AsciiConfig>, action: any) => {
     }
 }
 
-const MainPage = () => {
+const TwitchAscii = () => {
     const [loading, setLoading] = useState(true);
     const [showSideBar, setShowSideBar] = useState(true);
-    const [active, setActive] = useState(initData[0]);
-    const [ascii, dispatch] = useReducer(asciiReducer, initData);
+    const [active, setActive] = useState(initDataTwitch[0]);
+    const [ascii, dispatch] = useReducer(asciiReducer, initDataTwitch);
     const router = useRouter();
 
     const handleAddAscii = () => {
@@ -157,15 +156,7 @@ const MainPage = () => {
             <div className={`${showSideBar ? "flex flex-col basis-full 2xl:basis-1/5 p-4" : "hidden"}`}>
                 <div className="flex flex-row justify-between">
                     <div className="flex flex-col">
-                        <div className="flex items-center">
-                            <p className="text-2xl font-medium mr-1"> My Ascii - </p>
-                            <div className="text-2xl font-light mr-1">
-                                <span className="border bg-green-400 text-white font-bold">NEW</span> Try the Twitch Ascii (PC) just 👉
-                                <button className={buttonStyle} type="button" onClick={() => router.push("/twitch")}>
-                                    here
-                                </button> 👈
-                            </div>
-                        </div>
+                        <p className="text-2xl font-medium"> Twitch PC Ascii</p>
                         <p className="text-sm font-light text-gray-400"> Your saved arts!</p>
                     </div>
 
@@ -212,7 +203,7 @@ const MainPage = () => {
 
                 </div>
 
-                <Canvas width={WIDTH} onClick={checkColor} onMouseOver={checkHoverAndCtrl} active={active} />
+                <Canvas width={WIDTH} onClick={checkColor} onMouseOver={checkHoverAndCtrl} active={active} isTwitch={true} />
 
                 <div className="flex flew-row md:justify-between mb-10">
                     <div className="flex flex-row gap-2">
@@ -233,4 +224,4 @@ const MainPage = () => {
     );
 }
 
-export default MainPage;
+export default TwitchAscii;

@@ -2,7 +2,7 @@ import Script from "next/script"
 import './globals.css'
 
 export const metadata = {
-  title: 'Valorant Ascii Art',
+  title: 'Valscii Ascii Art',
   description: 'Created by a valorant player',
 }
 

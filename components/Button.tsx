@@ -12,13 +12,13 @@ const Button = (props: any) => {
     }
 
     return (
-        <button className={`w-fit shadow-lg px-4 py-1.5 border-2 border-none rounded-md ${style}`} type="submit" onClick={() => { onClick(); textAnimation() }}>
-            <span className="text-base font-semibold text-white">
+        <button className={`w-fit px-6 py-3 border-none rounded-lg font-semibold text-white text-sm tracking-wide ${style}`} type="submit" onClick={() => { onClick(); textAnimation() }}>
+            <span className="flex items-center gap-2">
                 {
                     !afterText && text
                 }
                 {
-                    !!afterText && "Done!"
+                    !!afterText && "✅ Done!"
                 }
             </span>
         </button>

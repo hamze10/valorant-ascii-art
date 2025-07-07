@@ -15,7 +15,7 @@ export default function Features() {
                             Features & Examples 
                         </h1>
                         <p className="text-gray-600 text-xl leading-relaxed max-w-3xl mx-auto"> 
-                            Discover the powerful features that make ValoAscii the best choice for creating ASCII art. See real examples and learn what's possible with our editor.
+                            Discover the powerful features that make ValoAscii the best choice for creating ASCII art. See real examples and learn what&apos;s possible with our editor.
                         </p>
                     </div>
                     

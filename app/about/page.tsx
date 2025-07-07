@@ -26,7 +26,7 @@ export default function About() {
                                 We believe that creativity should be accessible to everyone. ValoAscii was created to bridge the gap between artistic expression and gaming culture, providing players with tools to create unique, personalized content that stands out in the gaming community.
                             </p>
                             <p className="text-gray-600 leading-relaxed">
-                                Our mission is to democratize ASCII art creation, making it simple enough for beginners while providing advanced features for experienced artists. We're committed to fostering a creative community where players can express themselves through digital art.
+                                Our mission is to democratize ASCII art creation, making it simple enough for beginners while providing advanced features for experienced artists. We&apos;re committed to fostering a creative community where players can express themselves through digital art.
                             </p>
                         </div>
                         <div>

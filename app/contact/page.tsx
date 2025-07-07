@@ -15,7 +15,7 @@ export default function Contact() {
                             Contact Us 
                         </h1>
                         <p className="text-gray-600 text-xl leading-relaxed max-w-2xl mx-auto"> 
-                            We value your feedback and are here to help. Whether you have questions, suggestions, or need support, we're committed to providing you with the best possible experience.
+                            We value your feedback and are here to help. Whether you have questions, suggestions, or need support, we&apos;re committed to providing you with the best possible experience.
                         </p>
                     </div>
                     
@@ -61,7 +61,7 @@ export default function Contact() {
                                 </div>
                                 <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
                                     <h4 className="font-semibold text-orange-800 mb-2">🐛 Bug Reports</h4>
-                                    <p className="text-orange-700 text-sm">Found a bug? Let us know and we'll fix it quickly</p>
+                                    <p className="text-orange-700 text-sm">Found a bug? Let us know and we&apos;ll fix it quickly</p>
                                 </div>
                                 <div className="bg-pink-50 rounded-lg p-4 border border-pink-200">
                                     <h4 className="font-semibold text-pink-800 mb-2">💬 General Feedback</h4>
@@ -80,7 +80,7 @@ export default function Contact() {
                             </div>
                             <div className="bg-gray-50 rounded-xl p-6">
                                 <h3 className="text-xl font-bold text-gray-800 mb-3">How do I save my work?</h3>
-                                <p className="text-gray-600">Your creations are automatically saved to your browser's local storage. Click the "Save changes" button to ensure your work is preserved.</p>
+                                <p className="text-gray-600">Your creations are automatically saved to your browser&apos;s local storage. Click the &quot;Save changes&quot; button to ensure your work is preserved.</p>
                             </div>
                             <div className="bg-gray-50 rounded-xl p-6">
                                 <h3 className="text-xl font-bold text-gray-800 mb-3">Can I use ASCII art in VALORANT?</h3>
@@ -95,7 +95,7 @@ export default function Contact() {
                     
                     <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 text-center">
                         <h3 className="text-3xl font-bold text-white mb-4">Have a Different Question?</h3>
-                        <p className="text-white/90 text-lg mb-6">Don't see your question answered here? We're here to help!</p>
+                        <p className="text-white/90 text-lg mb-6">Don&apos;t see your question answered here? We&apos;re here to help!</p>
                         <a href="mailto:hamzamah1030@gmail.com" className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-lg px-8 py-4 text-white font-semibold transition-all duration-200 hover:scale-105">
                             <span>📨</span>
                             Send us an email

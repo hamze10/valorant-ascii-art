@@ -27,12 +27,12 @@ const MentionsLegales = () => {
                         <section className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
                             <div className="flex items-center gap-3 mb-6">
                                 <span className="text-3xl">🏢</span>
-                                <h2 className="text-3xl font-bold text-blue-800">Informations sur l'Éditeur</h2>
+                                <h2 className="text-3xl font-bold text-blue-800">Informations sur l&apos;Éditeur</h2>
                             </div>
                             <div className="bg-white rounded-xl p-6 shadow-sm">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div>
-                                        <h3 className="font-bold text-blue-800 mb-3">Identité de l'Éditeur</h3>
+                                        <h3 className="font-bold text-blue-800 mb-3">Identité de l&apos;Éditeur</h3>
                                         <ul className="text-blue-700 space-y-2">
                                             <li><strong>Nom :</strong> Hamza Mahmoudi</li>
                                             <li><strong>Statut :</strong> Développeur indépendant</li>
@@ -98,19 +98,19 @@ const MentionsLegales = () => {
                             <div className="bg-white rounded-xl p-6 shadow-sm">
                                 <div className="space-y-6">
                                     <div>
-                                        <h3 className="font-bold text-purple-800 mb-3">Droits d'Auteur</h3>
+                                        <h3 className="font-bold text-purple-800 mb-3">Droits d&apos;Auteur</h3>
                                         <p className="text-purple-700 leading-relaxed">
-                                            L'ensemble du site ValoAscii, incluant sa structure, son design, ses textes, ses images, et son code source, 
-                                            est protégé par le droit d'auteur. Toute reproduction, distribution, modification ou utilisation commerciale 
+                                            L&apos;ensemble du site ValoAscii, incluant sa structure, son design, ses textes, ses images, et son code source, 
+                                            est protégé par le droit d&apos;auteur. Toute reproduction, distribution, modification ou utilisation commerciale 
                                             sans autorisation écrite préalable est strictement interdite.
                                         </p>
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-purple-800 mb-3">Marques Tierces</h3>
                                         <p className="text-purple-700 leading-relaxed">
-                                            VALORANT est une marque déposée de Riot Games, Inc. ValoAscii n'est pas affilié, approuvé, 
+                                            VALORANT est une marque déposée de Riot Games, Inc. ValoAscii n&apos;est pas affilié, approuvé, 
                                             ou en aucune façon officiellement connecté avec Riot Games ou VALORANT. 
-                                            L'utilisation du nom "VALORANT" est uniquement à des fins descriptives.
+                                            L&apos;utilisation du nom &quot;VALORANT&quot; est uniquement à des fins descriptives.
                                         </p>
                                     </div>
                                     <div>
@@ -134,9 +134,9 @@ const MentionsLegales = () => {
                                     <div>
                                         <h3 className="font-bold text-orange-800 mb-3">Limitation de Responsabilité</h3>
                                         <p className="text-orange-700 leading-relaxed">
-                                            ValoAscii est fourni "en l'état" sans garantie d'aucune sorte. L'éditeur ne saurait être tenu responsable 
-                                            des dommages directs, indirects, consécutifs ou particuliers résultant de l'utilisation ou de l'impossibilité 
-                                            d'utiliser le service, y compris la perte de données ou les interruptions de service.
+                                            ValoAscii est fourni &quot;en l&apos;état&quot; sans garantie d&apos;aucune sorte. L&apos;éditeur ne saurait être tenu responsable 
+                                            des dommages directs, indirects, consécutifs ou particuliers résultant de l&apos;utilisation ou de l&apos;impossibilité 
+                                            d&apos;utiliser le service, y compris la perte de données ou les interruptions de service.
                                         </p>
                                     </div>
                                     <div>
@@ -150,7 +150,7 @@ const MentionsLegales = () => {
                                         <h3 className="font-bold text-orange-800 mb-3">Modération du Contenu</h3>
                                         <p className="text-orange-700 leading-relaxed">
                                             Bien que ValoAscii stocke les créations localement sur votre appareil, nous nous réservons le droit 
-                                            de refuser l'accès au service en cas d'utilisation abusive ou contraire à nos conditions d'utilisation.
+                                            de refuser l&apos;accès au service en cas d&apos;utilisation abusive ou contraire à nos conditions d&apos;utilisation.
                                         </p>
                                     </div>
                                 </div>
@@ -167,7 +167,7 @@ const MentionsLegales = () => {
                                     <div>
                                         <h3 className="font-bold text-gray-800 mb-3">Politique de Confidentialité</h3>
                                         <p className="text-gray-700 mb-3">
-                                            Pour des informations détaillées sur la collecte, l'utilisation et la protection de vos données personnelles :
+                                            Pour des informations détaillées sur la collecte, l&apos;utilisation et la protection de vos données personnelles :
                                         </p>
                                         <button 
                                             onClick={() => router.push('/privacy-policy')} 
@@ -204,7 +204,7 @@ const MentionsLegales = () => {
                                         <ul className="text-teal-700 space-y-1">
                                             <li>• <strong>Cookies essentiels :</strong> Fonctionnement de base du site</li>
                                             <li>• <strong>Cookies analytics :</strong> Google Analytics pour les statistiques anonymes</li>
-                                            <li>• <strong>Cookies publicitaires :</strong> Google AdSense pour l'affichage d'annonces</li>
+                                            <li>• <strong>Cookies publicitaires :</strong> Google AdSense pour l&apos;affichage d&apos;annonces</li>
                                             <li>• <strong>Stockage local :</strong> Sauvegarde de vos créations ASCII</li>
                                         </ul>
                                     </div>

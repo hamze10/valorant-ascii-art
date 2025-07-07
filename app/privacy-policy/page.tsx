@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
                                     <h3 className="text-xl font-bold">Local Storage Data</h3>
                                 </div>
                                 <p className="text-gray-700 leading-relaxed mb-3">
-                                    We store your ASCII art creations in your browser's local storage. This data includes:
+                                    We store your ASCII art creations in your browser&apos;s local storage. This data includes:
                                 </p>
                                 <ul className="text-gray-700 text-sm space-y-1">
                                     <li>• Your ASCII art designs and configurations</li>
@@ -170,7 +170,7 @@ export default function PrivacyPolicy() {
                                 </div>
                                 <div className="text-center">
                                     <h4 className="font-bold text-gray-800 mb-2">No Personal Data Storage</h4>
-                                    <p className="text-gray-600 text-sm">We don't store personal information on our servers</p>
+                                    <p className="text-gray-600 text-sm">We don&apos;t store personal information on our servers</p>
                                 </div>
                                 <div className="text-center">
                                     <h4 className="font-bold text-gray-800 mb-2">Regular Security Updates</h4>
@@ -191,7 +191,7 @@ export default function PrivacyPolicy() {
                                         We may update this privacy policy from time to time. When we do, we will:
                                     </p>
                                     <ul className="text-yellow-800 text-sm space-y-1">
-                                        <li>• Update the "Last updated" date at the top of this page</li>
+                                        <li>• Update the &quot;Last updated&quot; date at the top of this page</li>
                                         <li>• Notify users of significant changes through our website</li>
                                         <li>• Continue to respect your privacy choices</li>
                                     </ul>
@@ -204,10 +204,10 @@ export default function PrivacyPolicy() {
                         <span className="text-4xl mb-4 block">✅</span>
                         <h3 className="text-2xl font-bold text-green-800 mb-3">Your Privacy is Our Priority</h3>
                         <p className="text-green-800 mb-4">
-                            We are committed to protecting your privacy and using data responsibly. We collect only what's necessary to provide and improve our service.
+                            We are committed to protecting your privacy and using data responsibly. We collect only what&apos;s necessary to provide and improve our service.
                         </p>
                         <p className="text-green-700 text-sm">
-                            Questions about this policy? Don't hesitate to contact us at hamzamah1030@gmail.com
+                            Questions about this policy? Don&apos;t hesitate to contact us at hamzamah1030@gmail.com
                         </p>
                     </div>
                 </div>

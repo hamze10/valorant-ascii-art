@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import BuyMeACoffeeButton from "./BuyMeACoffee";
 
 const Header = () => {
     const router = useRouter();
@@ -36,6 +37,10 @@ const Header = () => {
                     Privacy
                 </button>
             </div>
+            <div className="flex justify-center mt-8 gap-1 flex-wrap">
+                <BuyMeACoffeeButton />
+            </div>
+
         </div>
     )
 }

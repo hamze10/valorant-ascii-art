@@ -6,6 +6,8 @@ export const metadata = {
   description: 'Created by a valorant player',
 }
 
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 export default function RootLayout({
   children,
 }: {
@@ -31,7 +33,15 @@ export default function RootLayout({
           }
         ></script>
       </head>
-      <body>{children}</body>
+      <body>
+        <div className="flex flex-col min-h-screen bg-valo-dark">
+          <Navbar />
+          <div className="flex-1 flex flex-col">
+            {children}
+          </div>
+          <Footer />
+        </div>
+      </body>
     </html>
   )
 }

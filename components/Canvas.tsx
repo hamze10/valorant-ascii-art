@@ -15,7 +15,15 @@ const Canvas = (props: any) => {
         for (let i: number = 0; i < width; i++) {
             let curr = (pos * width) + i
             content.push(
-                <button onMouseOver={e => { onMouseOver(e, pos, i) }} className={`${active.positions.indexOf(curr) == -1 ? 'bg-gray-300' : 'bg-white'} w-1/2 pb-1/2 border border-gray-500 shadow-md ${!isTwitch ? 'p-5 2xl:p-7' : 'p-4'}`} onClick={() => onClick(pos, i)} key={i} />
+                <button 
+                    key={i}
+                    onMouseOver={e => { onMouseOver(e, pos, i) }} 
+                    onClick={() => onClick(pos, i)} 
+                    className={`
+                        ${active.positions.indexOf(curr) == -1 ? 'bg-gray-800 hover:bg-gray-700' : 'bg-valorant-red hover:bg-pink-600'} 
+                        w-1/2 pb-1/2 border border-gray-700 transition-colors duration-100 ${!isTwitch ? 'p-5 2xl:p-7' : 'p-4'}
+                    `} 
+                />
             )
         }
 

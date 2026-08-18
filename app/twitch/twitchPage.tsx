@@ -5,7 +5,7 @@ import Canvas from "@/components/Canvas";
 import Button from "@/components/Button";
 import Loading from "../loading";
 import { AsciiConfig, initDataTwitch } from "@/data/data";
-import { EyeSlashIcon, EyeIcon, PlusCircleIcon, PlusIcon } from '@heroicons/react/24/solid'
+import { EyeSlashIcon, EyeIcon, PlusCircleIcon } from '@heroicons/react/24/solid'
 import CookieConsent from "react-cookie-consent";
 import { useRouter } from "next/navigation";
 
@@ -152,84 +152,99 @@ const TwitchAscii = () => {
     }
 
     return (
-        <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-            <div className={`${showSideBar ? "flex flex-col basis-full 2xl:basis-1/5 p-6 bg-white shadow-xl rounded-r-2xl" : "hidden"}`}>
-                <div className="flex flex-row justify-between items-start">
-                    <div className="flex flex-col">
-                        <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent mb-2"> 🎮 Twitch PC Ascii</h2>
-                        <p className="text-sm text-gray-500 font-medium"> Your Twitch artwork collection</p>
-                    </div>
-
-                    <button type="button" className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105" onClick={handleAddAscii}>
-                        <PlusCircleIcon className="h-6 w-6 text-white" />
-                    </button>
-                </div>
-                <ul className="mt-6 space-y-2">
-                    {
-                        ascii.map((el) => (
-                            <li key={el.id}>
-                                <div className={`flex flex-row justify-between items-center px-4 py-3 rounded-lg transition-all duration-200 ${active.id == el.id ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg" : "bg-gray-50 hover:bg-gray-100"}`}>
-                                    <button onClick={e => setActive(el)} className="flex-1 text-left font-medium"> {el.name} </button>
-                                    <button className="ml-2 w-6 h-6 rounded-full bg-red-100 hover:bg-red-200 text-red-600 hover:text-red-700 flex items-center justify-center transition-colors duration-200" onClick={e => handleDeletedAscii(el.id)}>
-                                        <span className="text-sm font-bold">×</span>
-                                    </button>
-                                </div>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </div>
-
-            <div className="flex flex-col gap-6 p-6">
-                <div className="bg-white rounded-2xl shadow-lg p-6">
-                    <div className="flex flex-row items-end lg:justify-between">
-                        <div className="flex flex-row gap-6">
-                            <div>
-                                <label className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide"> NAME </label>
-                                <input className="px-4 py-3 rounded-lg border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-200 shadow-sm" value={active.name} onChange={e => setActive({ ...active, name: e.target.value })} />
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-semibold text-gray-700 mb-2 tracking-wide"> HEIGHT</label>
-                                <input className="px-4 py-3 rounded-lg border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-200 shadow-sm" type="number" min={1} max={13} value={active.height} onChange={e => setActive({ ...active, height: Number(e.target.value) })} />
-                            </div>
+        <div className="flex flex-col min-h-screen w-full bg-valo-dark">
+            <div className="flex flex-row w-full flex-1">
+                <div className={`${showSideBar ? "flex flex-col basis-full md:basis-1/4 xl:basis-1/5 p-6 bg-gray-900 border-r border-gray-800" : "hidden"}`}>
+                    <div className="flex flex-row justify-between items-start mb-6 border-b border-gray-800 pb-4">
+                        <div className="flex flex-col">
+                            <h2 className="text-xl font-black text-white uppercase tracking-widest mb-1">🎮 Twitch ASCII</h2>
+                            <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">Your Collection</p>
                         </div>
 
-                        <button onClick={toggleSideBar} className="p-3 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200 ml-4">
-                            {showSideBar && <EyeSlashIcon className="h-5 w-5 text-purple-500" />}
-                            {!showSideBar && <EyeIcon className="h-5 w-5 text-purple-500" />}
+                        <button type="button" className="p-2 bg-valorant-red hover:bg-red-600 rounded-sm shadow-md transition-all duration-200" onClick={handleAddAscii}>
+                            <PlusCircleIcon className="h-6 w-6 text-white" />
                         </button>
+                    </div>
+                    <ul className="mt-2 space-y-2 overflow-y-auto max-h-[70vh]">
+                        {
+                            ascii.map((el) => (
+                                <li key={el.id}>
+                                    <div className={`flex flex-row justify-between items-center px-4 py-3 border transition-all duration-200 ${active.id == el.id ? "bg-valorant-red/10 border-valorant-red text-white" : "bg-gray-800/50 border-gray-800 hover:border-gray-600 text-gray-400 hover:text-gray-200"}`}>
+                                        <button onClick={e => setActive(el)} className="flex-1 text-left font-bold uppercase tracking-wider text-sm truncate"> {el.name} </button>
+                                        <button className="ml-2 w-6 h-6 rounded-sm bg-red-500/10 hover:bg-valorant-red text-red-400 hover:text-white flex items-center justify-center transition-colors duration-200" onClick={e => handleDeletedAscii(el.id)}>
+                                            <span className="text-sm font-bold">×</span>
+                                        </button>
+                                    </div>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
 
-                        <div className="ml-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg py-2 px-4 hidden lg:block">
-                            <p className="text-sm text-white font-medium"> 💡 Use CTRL + Click to select multiple cells </p>
+                <div className="flex flex-col flex-1 gap-6 p-6">
+                    <div className="bg-gray-900 border border-gray-800 p-6 relative group">
+                        <div className="absolute top-0 right-0 w-2 h-2 bg-valorant-red"></div>
+                        <div className="flex flex-row items-end lg:justify-between">
+                            <div className="flex flex-row gap-6 flex-wrap">
+                                <div>
+                                    <label className="block text-xs font-bold text-gray-500 mb-2 uppercase tracking-widest">NAME</label>
+                                    <input className="px-4 py-2 bg-gray-800 border-b-2 border-gray-700 focus:border-valorant-red focus:outline-none text-white transition-all duration-200 rounded-none w-48 font-mono" value={active.name} onChange={e => setActive({ ...active, name: e.target.value })} />
+                                </div>
+
+                                <div>
+                                    <label className="block text-xs font-bold text-gray-500 mb-2 uppercase tracking-widest">HEIGHT (ROWS)</label>
+                                    <input className="px-4 py-2 bg-gray-800 border-b-2 border-gray-700 focus:border-valorant-red focus:outline-none text-white transition-all duration-200 rounded-none w-24 font-mono text-center" type="number" min={1} max={13} value={active.height} onChange={e => setActive({ ...active, height: Number(e.target.value) })} />
+                                </div>
+                            </div>
+
+                            <div className="flex gap-4 items-center">
+                                <div className="hidden lg:block bg-gray-800 border border-gray-700 py-2 px-4">
+                                    <p className="text-xs text-gray-400 font-medium uppercase tracking-wider">💡 Use CTRL + Click to multi-select</p>
+                                </div>
+                                
+                                <button onClick={toggleSideBar} className="p-2.5 bg-gray-800 hover:bg-gray-700 transition-colors duration-200 border border-gray-700">
+                                    {showSideBar ? <EyeSlashIcon className="h-5 w-5 text-gray-400 hover:text-white" /> : <EyeIcon className="h-5 w-5 text-gray-400 hover:text-white" />}
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div className="bg-white rounded-2xl shadow-lg p-6">
-                    <Canvas width={WIDTH} onClick={checkColor} onMouseOver={checkHoverAndCtrl} active={active} isTwitch={true} />
-                </div>
-
-                <div className="flex flex-row md:justify-between mb-10 bg-white rounded-2xl shadow-lg p-6">
-                    <div className="flex flex-row gap-3">
-                        <Button style="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200" onClick={handleSaveAscii} text="💾 Save changes" />
-                        <Button style="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200" onClick={copyActive} text="📋 Copy" />
+                    <div className="bg-gray-900 border border-gray-800 p-6 flex-1 overflow-auto flex items-center justify-center relative">
+                        <Canvas width={WIDTH} onClick={checkColor} onMouseOver={checkHoverAndCtrl} active={active} isTwitch={true} />
                     </div>
-                    <div>
-                        <Button style="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200" onClick={reset} text="🔄 Reset" />
-                    </div>
-                </div>
 
-                <div className="bg-white rounded-2xl shadow-lg p-6">
-                    <p className="text-sm text-gray-600 font-medium"> 
-                        ⚠️ Our site is not affiliated with Valorant or Riot Games. 
-                        <button className="font-medium underline text-purple-500 hover:text-pink-500 transition-colors duration-200" type="button" onClick={() => router.push("/mentions-legales")}> 
-                            Mentions Légales 
-                        </button> 
-                    </p>
+                    <div className="flex flex-row flex-wrap md:justify-between items-center gap-4 bg-gray-900 border border-t-0 md:border-t border-gray-800 p-6 relative">
+                        <div className="absolute bottom-0 left-0 w-2 h-2 bg-valorant-red"></div>
+                        <div className="flex gap-4 w-full md:w-auto">
+                            <Button style="flex-1 md:flex-none uppercase tracking-widest font-bold" onClick={handleSaveAscii} text="💾 Save Changes" />
+                            <Button style="flex-1 md:flex-none uppercase tracking-widest font-bold border-gray-700 bg-gray-800 hover:bg-gray-700 text-white" onClick={copyActive} text="📋 Copy" />
+                        </div>
+                        <div className="w-full md:w-auto">
+                            <Button style="w-full md:w-auto uppercase tracking-widest font-bold border-red-900 bg-red-900/40 hover:bg-red-900/80 text-white" onClick={reset} text="🔄 Reset Grid" />
+                        </div>
+                    </div>
+
+                    <div className="bg-gray-900 border border-gray-800 p-4 text-center">
+                        <p className="text-xs text-gray-500 font-medium uppercase tracking-wider"> 
+                            ⚠️ Not affiliated with Valorant or Riot Games. <br className="md:hidden" />
+                            <button className="underline text-valorant-red hover:text-red-400 transition-colors duration-200 ml-1" type="button" onClick={() => router.push("/mentions-legales")}> 
+                                Mentions Légales 
+                            </button> 
+                        </p>
+                    </div>
                 </div>
             </div>
-            <CookieConsent> This website use cookies to improve user experience.</CookieConsent>
+            
+            <CookieConsent
+                location="bottom"
+                buttonText="I UNDERSTAND"
+                cookieName="valorantAsciiConsent"
+                style={{ background: "#0f1923", borderTop: "2px solid #ff4655", color: "#ece8e1", fontFamily: "monospace", fontSize: "14px", padding: "10px 20px" }}
+                buttonStyle={{ background: "#ff4655", color: "#fff", fontSize: "13px", fontWeight: "bold", padding: "8px 16px", borderRadius: "0", cursor: "pointer", border: "1px solid #ff4655", marginLeft: "20px" }}
+                expires={150}
+            >
+                This website uses cookies to store your creations and improve user experience.
+            </CookieConsent>
         </div>
     );
 }

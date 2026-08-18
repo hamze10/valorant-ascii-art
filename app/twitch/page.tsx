@@ -1,20 +1,17 @@
-import { Inter } from 'next/font/google'
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
 import TwitchAscii from "./twitchPage"
+import Head from 'next/head'
 
-const inter = Inter({ subsets: ['latin'] })
+export const metadata = {
+    title: "Twitch PC ASCII Editor | ValoAscii",
+    description: "Create standard wide ASCII art for Twitch chat using our specialized grid editor."
+}
 
 export default function Home() {
     return (
-        <main className="flex flex-col min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-            <Header />
-
+        <main className="flex flex-col min-h-screen bg-valo-dark text-valo-gray pb-12">
             <div className="flex flex-1">
                 <TwitchAscii />
             </div>
-            
-            <Footer />
         </main>
     )
 }

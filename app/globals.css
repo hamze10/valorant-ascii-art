@@ -6,3 +6,20 @@
     font-family: "Valorant";
     src: url("../public/valorantfont.ttf");
 }
+
+@layer base {
+  body {
+    @apply bg-valo-dark text-valo-gray overflow-x-hidden;
+  }
+
+  /* Custom Scrollbar for Valorant Aesthetic */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-valo-dark;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-valorant-red hover:bg-pink-600 transition-colors duration-200;
+  }
+}

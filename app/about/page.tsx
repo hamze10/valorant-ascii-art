@@ -1,15 +1,15 @@
 import { Inter } from 'next/font/google'
-import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const metadata = {
+    title: 'About ValoAscii — The ASCII Art Editor for Valorant Players',
+    description: 'Learn about ValoAscii, a free online grid-based editor for creating custom ASCII art, signatures and copy-pastas for Valorant chat and gaming communities.',
+}
 
 export default function About() {
     return (
         <main className="flex flex-col min-h-screen bg-valo-dark text-valo-gray pb-12">
-            <Head>
-                <title>About ValoAscii | Valorant ASCII Art Editor</title>
-                <meta name="description" content="Learn about ValoAscii, the premier online ASCII art editor designed specifically for VALORANT players and gaming enthusiasts." />
-            </Head>
             
             {/* Hero Section */}
             <div className="bg-gray-900 border border-gray-800 p-8 m-6 mb-4 mt-8 relative overflow-hidden group">
@@ -99,12 +99,12 @@ export default function About() {
                     
                     <div className="bg-valorant-red p-10 text-center relative overflow-hidden group mb-12 transform skew-x-[-2deg]">
                         <div className="transform skew-x-[2deg]">
-                            <h3 className="text-3xl font-black text-white uppercase tracking-widest mb-4">Join Our Community</h3>
-                            <p className="text-white/90 text-lg mb-8 font-medium">Thousands of players trust ValoAscii for their ASCII art needs. Join the creative revolution in gaming!</p>
+                            <h3 className="text-3xl font-black text-white uppercase tracking-widest mb-4">Try It For Free</h3>
+                            <p className="text-white/90 text-lg mb-8 font-medium">New project, updated regularly. Open the editor and create your first ASCII art in seconds — no registration needed.</p>
                             <div className="flex justify-center gap-4 flex-wrap">
-                                <span className="bg-valo-dark/50 border border-white/20 backdrop-blur-sm px-6 py-3 text-white font-bold tracking-widest uppercase text-sm">🎆 10,000+ Creations</span>
-                                <span className="bg-valo-dark/50 border border-white/20 backdrop-blur-sm px-6 py-3 text-white font-bold tracking-widest uppercase text-sm">👥 5,000+ Users</span>
-                                <span className="bg-valo-dark/50 border border-white/20 backdrop-blur-sm px-6 py-3 text-white font-bold tracking-widest uppercase text-sm">⭐ 4.8/5 Rating</span>
+                                <span className="bg-valo-dark/50 border border-white/20 backdrop-blur-sm px-6 py-3 text-white font-bold tracking-widest uppercase text-sm">✨ Free Forever</span>
+                                <span className="bg-valo-dark/50 border border-white/20 backdrop-blur-sm px-6 py-3 text-white font-bold tracking-widest uppercase text-sm">🚀 No Registration</span>
+                                <span className="bg-valo-dark/50 border border-white/20 backdrop-blur-sm px-6 py-3 text-white font-bold tracking-widest uppercase text-sm">💾 Saved Locally</span>
                             </div>
                         </div>
                     </div>

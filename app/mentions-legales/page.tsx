@@ -1,19 +1,13 @@
-"use client";
+import Link from "next/link";
 
-import { useRouter } from "next/navigation";
-import React from "react";
-import Head from "next/head";
+export const metadata = {
+    title: 'Mentions Légales — ValoAscii',
+    description: "Informations légales obligatoires concernant ValoAscii : éditeur, hébergement Vercel, propriété intellectuelle et responsabilité.",
+};
 
 const MentionsLegales = () => {
-    const router = useRouter();
-    
     return (
         <main className="flex flex-col min-h-screen bg-valo-dark text-valo-gray pb-12">
-            <Head>
-                <title>Mentions Légales | ValoAscii</title>
-                <meta name="description" content="Informations légales obligatoires concernant ValoAscii." />
-            </Head>
-            
             <div className="bg-gray-900 border border-gray-800 p-8 sm:p-12 m-6 mb-8 relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-valorant-red transform translate-x-16 -translate-y-16 rotate-45 opacity-20"></div>
                 
@@ -173,12 +167,9 @@ const MentionsLegales = () => {
                                     <div className="space-y-4">
                                         <div>
                                             <p className="text-gray-400 text-sm mb-3">Pour des informations détaillées sur la protection des données :</p>
-                                            <button 
-                                                onClick={() => router.push('/privacy-policy')} 
-                                                className="bg-white text-valo-dark hover:bg-gray-200 uppercase tracking-widest font-black text-xs px-4 py-3 transition-colors w-full sm:w-auto"
-                                            >
+                                            <Link href="/privacy-policy" className="inline-block bg-white text-valo-dark hover:bg-gray-200 uppercase tracking-widest font-black text-xs px-4 py-3 transition-colors w-full sm:w-auto">
                                                 📋 POLITIQUE DE CONFIDENTIALITÉ
-                                            </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

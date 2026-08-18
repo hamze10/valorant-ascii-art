@@ -8,7 +8,17 @@ export default function Navbar() {
                 <div className="flex justify-between h-16">
                     <div className="flex">
                         <div className="flex-shrink-0 flex items-center">
-                            <Link href="/" className="text-2xl font-black text-valo-gray tracking-wider transform hover:scale-105 transition-transform hover:text-valorant-red">
+                            <Link href="/" className="text-2xl font-black text-valo-gray tracking-wider transform hover:scale-105 transition-transform hover:text-valorant-red flex items-center">
+                                <svg viewBox="0 0 64 64" className="h-7 w-7 mr-2" fill="currentColor" aria-hidden="true">
+                                    <rect x="38" y="8" width="12" height="12"/>
+                                    <rect x="14" y="20" width="12" height="12"/>
+                                    <rect x="38" y="20" width="12" height="12"/>
+                                    <rect x="14" y="32" width="12" height="12" fill="#fa4454"/>
+                                    <rect x="26" y="32" width="12" height="12" fill="#fa4454"/>
+                                    <rect x="38" y="32" width="12" height="12" fill="#fa4454"/>
+                                    <rect x="14" y="44" width="12" height="12"/>
+                                    <rect x="38" y="44" width="12" height="12"/>
+                                </svg>
                                 Valo<span className="text-valorant-red">Ascii</span>
                             </Link>
                         </div>

@@ -1,13 +1,13 @@
-import Head from "next/head";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 // Define the content for each guide to simulate a database/CMS
-const GUIDE_CONTENT: Record<string, { title: string, date: string, author: string, content: React.ReactNode }> = {
+const GUIDE_CONTENT: Record<string, { title: string, date: string, author: string, excerpt: string, content: React.ReactNode }> = {
     "how-to-use-ascii-art": {
         title: "How to Use ASCII Art in Valorant Chat",
         date: "November 15, 2023",
         author: "ValoAscii Team",
+        excerpt: "A complete step-by-step guide on copying, pasting, and formatting ASCII masterpieces perfectly in Riot's famous tactical shooter.",
         content: (
             <>
                 <p>
@@ -40,6 +40,7 @@ const GUIDE_CONTENT: Record<string, { title: string, date: string, author: strin
         title: "Top 5 Valorant Chat Tricks You Didn't Know",
         date: "October 22, 2023",
         author: "ValoAscii Team",
+        excerpt: "From hidden commands to sending blank messages. Elevate your chat game with these lesser-known tricks.",
         content: (
             <>
                 <p>
@@ -72,6 +73,7 @@ const GUIDE_CONTENT: Record<string, { title: string, date: string, author: strin
         title: "Creating the Perfect Crosshair ASCII",
         date: "September 08, 2023",
         author: "ValoAscii Team",
+        excerpt: "Why settle for sharing crosshair codes when you can draw them in chat? Let's explore the geometry of text-based crosshairs.",
         content: (
             <>
                 <p>
@@ -104,6 +106,23 @@ export function generateStaticParams() {
     return Object.keys(GUIDE_CONTENT).map((slug) => ({
         slug: slug,
     }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<{ title: string, description: string }> {
+    const resolvedParams = await params;
+    const guide = GUIDE_CONTENT[resolvedParams.slug];
+
+    if (!guide) {
+        return {
+            title: "Guide Not Found — ValoAscii",
+            description: "This guide could not be found on ValoAscii.",
+        };
+    }
+
+    return {
+        title: `${guide.title} — ValoAscii`,
+        description: guide.excerpt,
+    };
 }
 
 export default async function GuidePage({ params }: { params: Promise<{ slug: string }> }) {

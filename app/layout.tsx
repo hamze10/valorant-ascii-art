@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata = {
   title: 'Valscii Ascii Art',
-  description: 'Created by a valorant player',
+  description: 'Free online ASCII art editor for Valorant players. Create, save and copy custom ASCII art for in-game chat, Discord, Twitch and more.',
 }
 
 import Navbar from "@/components/Navbar"

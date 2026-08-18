@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Head from "next/head";
 
 export const metadata = {
     title: "Valorant Guides, Chat Tricks & ASCII Tutorials",

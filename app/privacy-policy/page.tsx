@@ -1,12 +1,11 @@
-import Head from 'next/head'
+export const metadata = {
+    title: 'Privacy Policy — ValoAscii',
+    description: 'Read the ValoAscii privacy policy: how we use local storage for your creations, Google Analytics and Google AdSense.',
+}
 
 export default function PrivacyPolicy() {
     return (
         <main className="flex flex-col min-h-screen bg-valo-dark text-valo-gray pb-12">
-            <Head>
-                <title>Privacy Policy | ValoAscii</title>
-                <meta name="description" content="Read the ValoAscii privacy policy. Learn how we handle your data, local storage, and analytics." />
-            </Head>
             
             <div className="bg-gray-900 border border-gray-800 p-8 sm:p-12 m-6 mb-8 relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-valorant-red transform translate-x-16 -translate-y-16 rotate-45 opacity-20"></div>

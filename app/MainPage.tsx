@@ -188,7 +188,7 @@ const MainPage = () => {
                 <div className="bg-valorant-red p-6 text-center transform skew-x-[-2deg] mx-4 relative z-10">
                     <div className="transform skew-x-[2deg]">
                         <h3 className="text-2xl font-bold text-white uppercase tracking-wider mb-2">Start Creating Now!</h3>
-                        <p className="text-white/90 mb-4 font-medium">Join thousands of players who use ValoAscii to enhance their gaming experience</p>
+                        <p className="text-white/90 mb-4 font-medium">No registration, no downloads — open the editor and start creating right away</p>
                         <div className="flex justify-center gap-4">
                             <span className="bg-valo-dark/50 backdrop-blur-sm px-4 py-2 text-white font-bold tracking-widest uppercase text-sm border border-white/20">✨ Free Forever</span>
                             <span className="bg-valo-dark/50 backdrop-blur-sm px-4 py-2 text-white font-bold tracking-widest uppercase text-sm border border-white/20">🚀 No Registration</span>

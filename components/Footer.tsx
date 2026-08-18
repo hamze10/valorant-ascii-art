@@ -10,7 +10,17 @@ const Footer = () => {
                 <div className="grid md:grid-cols-4 gap-8">
                     {/* Brand Section */}
                     <div className="md:col-span-1 border-l-2 border-valorant-red pl-4">
-                        <h3 className="font-valorant text-xl text-white tracking-widest uppercase mb-4">
+                        <h3 className="font-valorant text-xl text-white tracking-widest uppercase mb-4 flex items-center">
+                            <svg viewBox="0 0 64 64" className="h-6 w-6 mr-2" fill="currentColor" aria-hidden="true">
+                                <rect x="38" y="8" width="12" height="12"/>
+                                <rect x="14" y="20" width="12" height="12"/>
+                                <rect x="38" y="20" width="12" height="12"/>
+                                <rect x="14" y="32" width="12" height="12" fill="#fa4454"/>
+                                <rect x="26" y="32" width="12" height="12" fill="#fa4454"/>
+                                <rect x="38" y="32" width="12" height="12" fill="#fa4454"/>
+                                <rect x="14" y="44" width="12" height="12"/>
+                                <rect x="38" y="44" width="12" height="12"/>
+                            </svg>
                             Valo<span className="text-valorant-red">Ascii</span>
                         </h3>
                         <p className="text-gray-400 text-sm leading-relaxed mb-4">

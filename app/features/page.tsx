@@ -1,15 +1,15 @@
 import { Inter } from 'next/font/google'
-import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const metadata = {
+    title: 'ValoAscii Features — Grid Editor, Auto-Save & One-Click Copy',
+    description: 'Discover the features of the ValoAscii editor: grid-based drawing, CTRL multi-select, auto-save to local storage and one-click copy for Valorant chat.',
+}
 
 export default function Features() {
     return (
         <main className="flex flex-col min-h-screen bg-valo-dark text-valo-gray pb-12">
-            <Head>
-                <title>Features & Examples | ValoAscii</title>
-                <meta name="description" content="Discover the powerful features that make ValoAscii the best choice for creating ASCII art." />
-            </Head>
             
             {/* Hero Section */}
             <div className="bg-gray-900 border border-gray-800 p-8 m-6 mb-8 relative overflow-hidden group">
